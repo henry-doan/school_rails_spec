@@ -3,7 +3,7 @@ class CreateSchools < ActiveRecord::Migration
     create_table :schools do |t|
       t.string :name
       t.string :mascot
-      t.string :year
+      t.integer :year
 
       t.timestamps null: false
     end

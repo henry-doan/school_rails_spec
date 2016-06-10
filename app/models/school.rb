@@ -1,15 +1,15 @@
 class School < ActiveRecord::Base
 	validates_presence_of :name, :mascot, :year
+	has_many :classrooms
 
 	def name_mascot
 		"#{name} home of the #{mascot}"
 	end
 
 	def school_age
-		school_age = year.to_i
-		if(school_age >= 2000)
+		if (year >= 2000)
 			"New"
-		elsif (school_age >= 1800)
+		elsif (year >= 1800)
 			"Pretty old"
 		else
 			"Way old"
