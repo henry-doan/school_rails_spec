@@ -40,7 +40,7 @@ class ClassroomsController < ApplicationController
 
   private
   	def classroom
-  		Classroom.find(params[:id])
+  		@classroom = @school.classrooms.find(params[:id])
   	end
 
   	def school

@@ -113,7 +113,7 @@ RSpec.describe ClassroomsController, type: :controller do
     end
 
     it "set the class in the instance var" do
-      expect(assigns(:classroom).id).to eq(classrooms.id)
+      expect(assigns(:classroom).id).to eq(classroom.id)
     end
   end
 
@@ -131,7 +131,7 @@ RSpec.describe ClassroomsController, type: :controller do
 
     it 'redirect to the show on success' do
       put :update, { school_id: school.id, id: classroom.id, classroom: {name: 'new name'}}
-      expect(response).to redirect_to(school_classroom_path(Classroom.first))
+      expect(response).to redirect_to(school_classroom_path(assigns(:school), (assigns(:classroom))))
     end
 
     it 'renders the edit template on fail' do
@@ -159,7 +159,7 @@ RSpec.describe ClassroomsController, type: :controller do
     end
 
     it 'redirect to the index path after destroys' do
-      expect(response).to redirect_to(school_classrooms_path(assigns(:school)), (assigns(:classroom)))
+      expect(response).to redirect_to(school_classrooms_path(assigns(:school)))
     end
   end
 
