@@ -1,0 +1,9 @@
+@import "materialize/components/color";
+$primary-color: red !default;
+$secondary-color: green !default;
+@import 'materialize';
+@import url(https://fonts.googleapis.com/css?family=IM+Fell+English);
+
+html{
+	font-family: 'IM Fell English', serif;
+}
