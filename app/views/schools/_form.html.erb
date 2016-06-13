@@ -1,13 +1,24 @@
 <%= form_for @school do |f| %>
+	<div class="row">
+		<div class="input-field col s6 offset-s3">
+			<%= f.label :name, class: 'white-text' %>
+			<%= f.text_field :name, class: 'brown-text text-darken-4' %>
+		</div>
+	</div>
 
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<div class="row">
+		<div class="input-field col s6 offset-s3">
+			<%= f.label :mascot, class: 'white-text' %>
+			<%= f.text_field :mascot, class: 'brown-text text-darken-4' %>
+		</div>
+	</div>
 
-	<%= f.label :mascot %>
-	<%= f.text_field :mascot %>
-
-	<%= f.label :year %>
-	<%= f.number_field :year %>
+	<div class="row">
+		<div class="input-field col s6 offset-s3">
+			<%= f.label :year, class: 'white-text' %>
+			<%= f.number_field :year, class: 'brown-text text-darken-4' %>
+		</div>
+	</div>
 
 	<%= f.submit nil, class: "submit-school-btn btn" %>
 

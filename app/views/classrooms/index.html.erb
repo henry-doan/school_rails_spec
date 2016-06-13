@@ -1,12 +1,11 @@
-<h1 class='classroom-header'>Classrooms</h1>
-<hr />
+<h1 class='classroom-header white-text'>Classrooms</h1>
 
 <% if @classrooms.any? %>
   <div class='row'>
     <% @classrooms.each do |classroom| %>
       <div class="col s12 m6">
-       <div class="card black">
-         <div class="card-content white-text">
+       <div class="card grey lighten-2">
+         <div class="card-content brown-text">
            <span class="card-title classname"><%= @school.classrooms.name %></span>
          </div>
          <div class="card-action">
@@ -17,7 +16,7 @@
     <% end %>
   </div>
 <% else %>
-  <h3 class='no-class-msg'>There Is No classroom, Go make one!</h3>
+  <h3 class='no-class-msg white-text'>There Is No classroom, Go make one!</h3>
 <% end %>
 
 <%= link_to 'New Class', new_school_classroom_path(@school), class: 'new-classroom btn' %>

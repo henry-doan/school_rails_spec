@@ -1,6 +1,6 @@
-<h1 class='show-header'>Showing <%= @school.name %> home of the <%= @school.mascot %> </h1>
+<h1 class='show-header white-text'>Showing <%= @school.name %> home of the <%= @school.mascot %> </h1>
 
-<h3 class='year-header'>Year Built: <%= @school.year %></h3>
+<h3 class='year-header white-text'>Year Built: <%= @school.year %></h3>
 
 <%= link_to 'Back to school', schools_path, class: 'school-back btn' %>
 <%= link_to 'Show classes', school_classrooms_path(@school), class: 'index-classroom-btn btn' %>

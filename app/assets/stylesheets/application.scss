@@ -1,9 +1,16 @@
 @import "materialize/components/color";
-$primary-color: red !default;
-$secondary-color: green !default;
+$primary-color: color("brown", "darken-3") !default;
+$secondary-color: color("brown", "lighten-1") !default;
 @import 'materialize';
 @import url(https://fonts.googleapis.com/css?family=IM+Fell+English);
 
 html{
 	font-family: 'IM Fell English', serif;
+}
+body {
+	background: image-url('united-kingdom.jpeg');
+	background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
 }
